@@ -1,0 +1,21 @@
+@use "sass:math";
+// базовые подключения
+@import "mixins";
+@import "vars";
+@import "fonts";
+@import "settings";
+
+// Подключение стилей отдельных блоков
+@import "./components/header";
+
+// Подключение стилей отдельных страниц
+
+// Подключение стилей общих элементов проекта
+
+// тестовые стили, удалите их
+.page__body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: var(--vh);
+  }
