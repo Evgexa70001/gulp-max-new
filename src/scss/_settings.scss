@@ -6,7 +6,7 @@
 
 .page__body {
   margin: 0;
-  min-width: $minWidth * 1px;
+  min-width: calc(#{$minWidth} * 1px);
   min-height: 100%;
   font-size: $fontSize;
 }
@@ -32,8 +32,8 @@
 
 .container {
   margin: 0 auto;
-  padding: 0 $containerOffset;
-  max-width: $containerWidth;
+  padding: 0 calc(#{$containerPadding} / 2 * 1px);
+  max-width: calc($containerWidth * 1px);
 }
 
 .dis-scroll {

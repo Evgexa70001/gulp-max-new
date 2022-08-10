@@ -2,22 +2,16 @@
 $fontFamily: "OpenSans", sans-serif;
 $fontSize: rem(16);
 
-//Container
-$contentWidth: 1280px;
-$containerOffset: 15px;
-$containerWidth: calc(#{$contentWidth} + #{$containerOffset} * 2);
-
-
 //Переменные для adaptiveValue
 $minWidth: 320;
 $maxWidth: 1920;
-$maxWidthContainer: calc($contentWidth / 1px);
-$containerPadding: calc(($containerOffset * 2) / 1px);
-$containerWidthAv: $maxWidthContainer + $containerPadding;
+//Container
+$maxWidthContainer: 1280;
+$containerPadding: 30;
+$containerWidth: $maxWidthContainer + $containerPadding;
 
 // colors
 $colorLight: #fff;
-
 //Раскоментируйте если хотите использовать root переменные
 // colors
 // :root {

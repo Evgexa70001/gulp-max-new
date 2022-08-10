@@ -8,7 +8,7 @@
 	@return $result;
 }
 
-@mixin adaptiveValue($property, $startSize, $minSize, $widthFrom: $containerWidthAv, $widthTo: $minWidth, $keepSize: 0) {
+@mixin adaptiveValue($property, $startSize, $minSize, $widthFrom: $containerWidth, $widthTo: $minWidth, $keepSize: 0) {
 	@if ($startSize==0) {
 		$startSize: 0.000001;
 	}
@@ -19,7 +19,7 @@
 	// Для calc();
 	$addSize: math.div($startSize - $minSize, 16);
 
-	@if ($widthFrom == $containerWidthAv and $maxWidthContainer == 0) {
+	@if ($widthFrom == $containerWidth and $maxWidthContainer == 0) {
 		$widthFrom: $maxWidth;
 	}
 
@@ -53,7 +53,7 @@
 	}
 
 	// Устанавливаем значения по умолчанию
-	@if $widthFrom != $containerWidthAv and $widthFrom != $maxWidth and $keepSize != 1 and $keepSize != 2 {
+	@if $widthFrom != $containerWidth and $widthFrom != $maxWidth and $keepSize != 1 and $keepSize != 2 {
 		@media (min-width: $widthFromMedia) {
 			#{$property}: inherit;
 		}
